@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cavyn</title>
+
+    <link rel="icon" href="icon.ico">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://fonts.googleapis.com/css?family=Advent%20Pro%3A400%2C400italic%2C700%2C700italic">
+    <link rel="stylesheet" type="text/css"
+        href="https://fonts.googleapis.com/css?family=Advent%20Pro%3A400%2C400italic%2C700%2C700italic">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <main>
+        <h1>Cavyn</h1>
+        <p>Don't get crushed while the cave collapses!</p>
+
+        <div class="images">
+            <div class="image-left">
+                <img class="imgs" src="PJkc4LF.gif">
+            </div>
+
+            <div class="images-right">
+                <img class="imgs" src="adIOoy.png">
+                <img class="imgs" src="DkZCMs.png">
+            </div>
+        </div>
+
+        <p style="font-style: italic;">Made in less than 48 hours with the theme "Caves".</p>
+
+        <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn">More information</button>
+            <div id="myDropdown" class="dropdown-content">
+                <b>Status</b> <a>Released</a><br>
+                <b>Platforms</b> <a>Windows</a><br>
+                <b>Rated</b> <a>4.8 out of 5 stars</a><br>
+                <b>Author</b> <a>Nikocity</a><br>
+                <b>Genre</b> <a>Platformer</a><br>
+                <b>Made</b> <a>with pygame</a><br>
+                <b>Tags</b> <a>16-bit, 2D, 8-Bit, Arcade, Pixel Art, Retro</a><br>
+                <b>Average</b> <a>session A few minutes</a><br>
+                <b>Inputs</b> <a>Keyboard</a><br>
+            </div>
+        </div>
+        <br>
+        <br>
+        <h1>Download</h1>
+
+        <a href="Cavyn Setup.exe" download>
+            <button class="download">Download Now</button>
+        </a>
+
+        <p>Click download now to get access to the following files:</p>
+
+        <p class="bold">Cavyn Window <a class="muted">28 KB <i class="fa-brands fa-windows"></i></a> </p>
+    </main>
+
+    <script>
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        window.onclick = function (event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

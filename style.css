@@ -1,0 +1,147 @@
+:root {
+    color-scheme: dark;
+    --cavyn-bg: #161328;
+    --cavyn-main: #000;
+    --cavyn_bg2_sub: #191919;
+    --cavyn_text_color: #efebc7;
+    --cavyn_link_color: #f4c754;
+    --cavyn_border_color: #262626;
+    --cavyn_button_color: #f4c754;
+    --cavyn_button_fg_color: #302710;
+}
+
+body {
+    background-color: var(--cavyn-bg);
+    font-family: 'Advent Pro', Lato, LatoExtended, sans-serif;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+::selection {
+    color: #302710;
+    background: #f4c754;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Main Start */
+main {
+    border-right: 1px solid var(--cavyn_border_color);
+    background-color: var(--cavyn-main);
+    margin: auto 13em;
+    padding: 20px;
+    border-left: 1px solid var(--cavyn_border_color);
+}
+
+main>h1 {
+    font-size: 40px;
+    font-weight: 600;
+}
+
+main>p {
+    line-height: 3em;
+    font-size: 20px;
+    font-weight: 100;
+}
+
+.images-right {
+    display: grid;
+}
+
+.images {
+    display: flex;
+    gap: 1em;
+    user-select: none;
+}
+
+.images-right img {
+    width: 100%;
+}
+
+.image-left img {
+    margin: 5em auto;
+    width: 100%;
+}
+
+.download {
+    margin-top: 1em;
+    text-decoration: none;
+    padding: 0 10px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 3px;
+    background-color: #f4c754;
+    color: #302710;
+    text-shadow: 0 1px 0px transparent;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0 0 1px rgba(255, 255, 255, 0.21);
+    text-align: center;
+    line-height: 33px;
+    font-weight: bold;
+    height: 35px;
+    min-width: 75px;
+}
+
+.bold {
+    font-weight: 600;
+    margin-top: -1em;
+}
+
+.muted {
+    font-weight: 300;
+    opacity: 0.7;
+}
+
+/* Main End */
+
+/* Dropdown Start */
+.dropbtn {
+    color: var(--cavyn_button_color);
+    background: transparent;
+    text-decoration: underline;
+    padding: 1em 0;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    user-select: none;
+    display: none;
+    position: relative;
+    background-color: var(--cavyn_bg2_sub);
+    min-width: 224px;
+    padding: 20px 2em;
+    width: 130%;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    color: var(--cavyn_link_color);
+    line-height: 1.5em;
+}
+
+.dropdown-content a {
+    text-decoration: underline;
+}
+
+.show {
+    display: block;
+}
+
+b {
+    color: var(--cavyn_text_color);
+    text-decoration: none;
+    font-weight: 600;
+    opacity: 0.9;
+    letter-spacing: 0.5px;
+}
+
+/* Dropdown End */
