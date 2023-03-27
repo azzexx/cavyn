@@ -19,7 +19,7 @@ body {
 
 ::selection {
     color: #302710;
-    background: #f4c754;
+    background: var(--cavyn_link_color);
 }
 
 * {
@@ -73,7 +73,7 @@ main>p {
     font-size: 14px;
     cursor: pointer;
     border-radius: 3px;
-    background-color: #f4c754;
+    background-color: var(--cavyn_link_color);
     color: #302710;
     text-shadow: 0 1px 0px transparent;
     border: 1px solid rgba(0, 0, 0, 0.1);
@@ -145,3 +145,47 @@ b {
 }
 
 /* Dropdown End */
+
+/* Downloads Start */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    user-select: none;
+}
+
+td,
+th {
+    border: 1px solid var(--cavyn_button_fg_color);
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: var(--cavyn_button_fg_color);
+}
+
+th.download-link a {
+    font-weight: 100;
+    color: var(--cavyn_link_color);
+    text-decoration: underline;
+}
+/* Downloads End */
+
+/* Footer Start */
+.footer {
+    bottom: 0;
+    position: relative;
+    padding: 20px;
+}
+
+.footer ul {
+    display: flex;
+    gap: 2em;
+}
+
+.footer ul li a {
+    color: var(--cavyn_link_color);
+    text-decoration: none;
+}
+
+/* Footer End */
