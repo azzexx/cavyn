@@ -32,6 +32,10 @@ body {
     padding: 0;
 }
 
+.drop-left {
+    text-align: right;
+}
+
 /* Main Start */
 main {
     border-right: 1px solid var(--cavyn_border_color);
@@ -125,7 +129,7 @@ main>p {
     background-color: var(--cavyn_bg2_sub);
     min-width: 224px;
     padding: 20px 2em;
-    width: 130%;
+    width: 110%;
     overflow: auto;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
@@ -138,7 +142,8 @@ main>p {
 }
 
 .show {
-    display: block;
+    display: flex;
+    gap: 5px;
 }
 
 b {
