@@ -38,7 +38,7 @@
         </table>
 
         <br>
-        
+
         <table>
             <tr>
                 <th style="user-select: all;">Platform</th>
@@ -112,6 +112,53 @@
                 <li><a href="/sitemap.xml">Sitemap</a></li>
             </ul>
         </div>
+
+        <br>
+
+        <h1>Github Releases
+            <div class='com-title'>
+                <p>Auto-Updating</p>
+            </div>
+        </h1>
+
+        <div id="releases"></div>
+
+        <script>
+            const releasesContainer = document.getElementById('releases');
+            const username = 'azzexx';
+            const repository = 'cavyn';
+
+            fetch(`https://api.github.com/repos/${username}/${repository}/releases`)
+                .then(response => response.json())
+                .then(data => {
+                    const releases = data.map(release => {
+                        const assets = release.assets.map(asset => {
+                            const size = (asset.size / 1000000).toFixed(2); // Convert to MB and round to 2 decimal places
+                            const date = new Date(asset.updated_at).toLocaleDateString(); // Convert to local date string
+                            return `
+            <tr>
+                <td class="platform"><i class="fa-solid fa-inbox-in"></i> ${asset.name}</td>
+                <td class="size">${size} MB</td>
+                <td class="version">${date}</td>
+                <th class="download-link"><a href="${asset.browser_download_url}" download>Download</a></th>
+            </tr>
+        `;
+                        }).join('');
+
+                        return `
+            <br>
+            <div class="released">
+            <table>
+            ${assets}
+            </table>
+            </div>
+      `;
+                    }).join('');
+
+                    releasesContainer.innerHTML = releases;
+                })
+                .catch(error => console.error(error));
+        </script>
     </main>
 </body>
 
