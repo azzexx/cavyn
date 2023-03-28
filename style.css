@@ -258,4 +258,17 @@ svg.svgicon:hover {
 #commits {
     padding: 0 10px;
 }
+
 /* Commits End */
+
+/* Released Start */
+.released {
+    border: 1px solid var(--cavyn_button_fg_color);
+    padding: 1em;
+}
+
+.released table tbody tr:nth-child(even) {
+    background: transparent;
+}
+
+/* Released End */
