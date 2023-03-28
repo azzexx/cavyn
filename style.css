@@ -3,6 +3,7 @@
     --cavyn-bg: #161328;
     --cavyn-main: #000;
     --cavyn_bg2_sub: #191919;
+    --cavyn-solid-text: #efebc7;
     --cavyn_text_color: #efebc7;
     --cavyn_link_color: #f4c754;
     --cavyn_border_color: #262626;
@@ -194,3 +195,67 @@ th.download-link a {
 }
 
 /* Footer End */
+
+/* Commits Start */
+.commit {
+    padding: 1em 10px;
+}
+
+.com-title {
+    display: flex;
+    gap: 10px;
+    position: relative;
+}
+
+.com-title h4 a {
+    color: var(--cavyn_link_color);
+    text-decoration: underline;
+    position: relative;
+    display: inline;
+}
+
+.com-title p {
+    font-size: 13px;
+    position: relative;
+    padding: 3px 0px;
+    color: #efebc780;
+}
+
+.sum-commit {
+    display: flex;
+}
+
+.com-message {
+    color: var(--cavyn-solid-text);
+    font-size: 19px;
+    line-height: 1.9rem;
+}
+
+svg.svgicon {
+    color: var(--cavyn-solid-text);
+    fill: var(--cavyn-solid-text);
+    display: grid;
+    position: relative;
+    cursor: pointer;
+    padding: 2px;
+}
+
+svg.svgicon:hover {
+    background: #dddddd24;
+}
+
+.svgs {
+    position: relative;
+    border: 1px solid #efebc733;
+    border-radius: 2px;
+}
+
+.post-grid {
+    position: relative;
+    margin-top: 1em;
+}
+
+#commits {
+    padding: 0 10px;
+}
+/* Commits End */
