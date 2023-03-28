@@ -14,6 +14,8 @@
     <link rel="stylesheet" type="text/css"
         href="https://fonts.googleapis.com/css?family=Advent%20Pro%3A400%2C400italic%2C700%2C700italic">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
@@ -58,7 +60,10 @@
 
         <p>Click download now to get access to the following files:</p>
 
-        <p class="bold">Cavyn Windows <a class="muted">28 KB <i class="fa-brands fa-windows"></i></a> </p>
+        <p class="bold">Cavyn Window <a class="muted">28 KB <i class="fa-brands fa-windows"></i></a> </p>
+
+        <h1>Github Commits</h1>
+        <ul id="commits"></ul>
 
         <div class="footer">
             <ul>
@@ -67,6 +72,41 @@
                 <li><a href="/sitemap.xml">Sitemap</a></li>
             </ul>
         </div>
+
+        <script>
+            $(function () {
+                var owner = "azzexx";
+                var repo = "cavyn";
+                var api_url = "https://api.github.com/repos/" + owner + "/" + repo + "/commits";
+
+                $.getJSON(api_url, function (data) {
+                    var commits = data.slice(0, 10);
+                    $.each(commits, function (index, commit) {
+                        var message = commit.commit.message;
+                        var author = commit.commit.author.name;
+                        var date = new Date(commit.commit.author.date).toLocaleString();
+
+                        var commit_html =
+                            "<div class='sum-commit'>" +
+                                "<div class='post-grid'>" +
+                                    "<div class='svgs'>" +
+                                        "<svg aria-hidden='' height='20' width='20' role='img' viewBox='0 0 24 24' class='svgicon' version='1.1'><polygon points='2 18 12 6 22 18'></polygon></svg>" +
+                                        "<svg aria-hidden='' height='20' width='20' role='img' viewBox='0 0 24 24' class='svgicon' version='1.1'><polygon points='2 6 12 18 22 6'></polygon></svg>" +
+                                    "</div>" +
+                                "</div>" +
+
+                                "<div class='commit'> " +
+                                    "<div class='com-title'>" +
+                                    "<h4><a target='_blank' href='https://github.com/" + owner + "'>" + author + "</a></h4>" +
+                                    "<p>" + date + "</p> </div>" +
+                                    "<div class='com-message'>" + message + "</div>" +
+                                "</div>" +
+                            "</div>";
+                        $("#commits").append(commit_html);
+                    });
+                });
+            });
+        </script>
     </main>
 
     <script>
