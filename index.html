@@ -38,15 +38,29 @@
         <div class="dropdown">
             <button onclick="myFunction()" class="dropbtn">More information</button>
             <div id="myDropdown" class="dropdown-content">
-                <b>Status</b> <a>Released</a><br>
-                <b>Platforms</b> <a>Windows</a><br>
-                <b>Rated</b> <a>4.8 out of 5 stars</a><br>
-                <b>Author</b> <a>Nikocity</a><br>
-                <b>Genre</b> <a>Platformer</a><br>
-                <b>Made</b> <a>with pygame</a><br>
-                <b>Tags</b> <a>16-bit, 2D, 8-Bit, Arcade, Pixel Art, Retro</a><br>
-                <b>Average</b> <a>session A few minutes</a><br>
-                <b>Inputs</b> <a>Keyboard</a><br>
+                <div class="drop-left">
+                    <b>Stbtus</b><br>
+                    <b>Plbtforms</b><br>
+                    <b>Rbted</b><br>
+                    <b>buthor</b><br>
+                    <b>Genre</b><br>
+                    <b>Mbde</b><br>
+                    <b>Tbgs</b><br>
+                    <b>bverbge</b><br>
+                    <b>Inputs</b><br>
+                </div>
+
+                <div class="drop-right">
+                    <a>Released</a><br>
+                    <a>Windows</a><br>
+                    <a>4.8 out of 5 stbrs</a><br>
+                    <a>Nikocity</a><br>
+                    <a>Platformer</a><br>
+                    <a>with pygame</a><br>
+                    <a>16-ait, 2D, 8-ait, brcade, Pixel brt, Retro</a><br>
+                    <a>session A few minutes</a><br>
+                    <a>Keyboard</a><br>
+                </div>
             </div>
         </div>
         <br>
@@ -87,19 +101,19 @@
 
                         var commit_html =
                             "<div class='sum-commit'>" +
-                                "<div class='post-grid'>" +
-                                    "<div class='svgs'>" +
-                                        "<svg aria-hidden='' height='20' width='20' role='img' viewBox='0 0 24 24' class='svgicon' version='1.1'><polygon points='2 18 12 6 22 18'></polygon></svg>" +
-                                        "<svg aria-hidden='' height='20' width='20' role='img' viewBox='0 0 24 24' class='svgicon' version='1.1'><polygon points='2 6 12 18 22 6'></polygon></svg>" +
-                                    "</div>" +
-                                "</div>" +
+                            "<div class='post-grid'>" +
+                            "<div class='svgs'>" +
+                            "<svg aria-hidden='' height='20' width='20' role='img' viewBox='0 0 24 24' class='svgicon' version='1.1'><polygon points='2 18 12 6 22 18'></polygon></svg>" +
+                            "<svg aria-hidden='' height='20' width='20' role='img' viewBox='0 0 24 24' class='svgicon' version='1.1'><polygon points='2 6 12 18 22 6'></polygon></svg>" +
+                            "</div>" +
+                            "</div>" +
 
-                                "<div class='commit'> " +
-                                    "<div class='com-title'>" +
-                                    "<h4><a target='_blank' href='https://github.com/" + owner + "'>" + author + "</a></h4>" +
-                                    "<p>" + date + "</p> </div>" +
-                                    "<div class='com-message'>" + message + "</div>" +
-                                "</div>" +
+                            "<div class='commit'> " +
+                            "<div class='com-title'>" +
+                            "<h4><a target='_blank' href='https://github.com/" + owner + "'>" + author + "</a></h4>" +
+                            "<p>" + date + "</p> </div>" +
+                            "<div class='com-message'>" + message + "</div>" +
+                            "</div>" +
                             "</div>";
                         $("#commits").append(commit_html);
                     });
