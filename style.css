@@ -10,6 +10,10 @@
     --cavyn_button_fg_color: #302710;
 }
 
+br {
+    user-select: none;
+}
+
 body {
     background-color: var(--cavyn-bg);
     font-family: 'Advent Pro', Lato, LatoExtended, sans-serif;
@@ -169,6 +173,7 @@ th.download-link a {
     color: var(--cavyn_link_color);
     text-decoration: underline;
 }
+
 /* Downloads End */
 
 /* Footer Start */
